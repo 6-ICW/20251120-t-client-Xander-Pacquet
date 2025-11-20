@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sint-lijstje</title>
+  </head>
+  <body>
+    <h1>Voeg geschenk toe, of wis geschenken</h1>
+    <div id="selKind">
+      <select name="kinderen" id="kinderen">
+        <option value="0">Kies een kind</option>
+      </select>
+      <div id="reedsgeschenk">
+        <ul id="geschenkenlijst">
+          <li>
+            wordt vervangen door de geschenken die reeds in de lijst staan
+          </li>
+        </ul>
+      </div>
+      <div id="addGeschenk">
+        <form id="addGeschenk">
+          <select name="geschenken" id="geschenken">
+            <option value="0">Kies het toe te geschenk</option>
+          </select>
+          <input type="submit" value="geschenk toevoegen" />
+        </form>
+      </div>
+      <div id="verwijderGeschenk">
+        <form id="verwijderGeschenk">
+          <select name="geschenken" id="geschenken">
+            <option value="0">Kies het te verwijderen geschenk</option>
+          </select>
+          <input type="submit" value="wis geschenk" />
+        </form>
+      </div>
+    </div>
+    <h2>voeg een kind toe aan de lijst</h2>
+    <form id="addKind">
+      <p>
+        <label for="naam">naam:</label> <input type="text" name="voornaam" />
+      </p>
+      <p>
+        <label for="achternaam">naam:</label>
+        <input type="text" name="achternaam" />
+      </p>
+    </form>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
