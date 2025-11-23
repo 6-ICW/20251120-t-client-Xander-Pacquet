@@ -7,12 +7,13 @@ const addGeschenk = document.querySelector("#addGeschenk")
 const geschenken1 = document.querySelector("#geschenken1")
 const geschenken2 = document.querySelector("#geschenken2")
 
-
+// Goed dat je werkt met een function
 // 1. SPELERS LADEN IN DROPDOWN
 function loadKinderen() {
     fetch("https://o-apiandclient-render.onrender.com/kinderen")
     .then(res => res.json())
     .then(kinderen => {
+      //Goed gedaan. 
       selKind.innerHTML = '<option value="">-- Kies een kind --</option>';
 
       kinderen.forEach(kind => {
@@ -21,6 +22,8 @@ function loadKinderen() {
         opt.textContent = `${kind.voornaam} ${kind.achternaam}`;
         selKind.appendChild(opt);
         
+        // vanaf hier loopt het fout. 
+        // Zorg dat je goed weet wat je terug krijgt op vlak van type object
         selKind.addEventListener("onclick",()=>{
             const newLi = document.createElement("li")
             newP = kind.id
@@ -35,6 +38,8 @@ function loadKinderen() {
 // init: kinderlijstje vullen
 loadKinderen();
 
+// Vreemde benaming van je functies
+// Je gebruik de api - kinderen om de geschenken op te halen? 
 function loadgeschenken1() {
   fetch("https://o-apiandclient-render.onrender.com/kinderen")
     .then(res => res.json())
@@ -67,6 +72,9 @@ function loadgeschenken2() {
       });
     });
 }
+
+// Hier raakte je niet verder dan een kopie past uit een 
+// vorige opgave. 
 
 // init: kinderlijstje vullen
 loadgeschenken2();
